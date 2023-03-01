@@ -1,7 +1,7 @@
 package main
 
 import (
-	"determinator/atlas"
+	"determinator/resources"
 	"fmt"
 )
 
@@ -12,15 +12,11 @@ func main() {
 	//	var iops = 7500
 	//	var storage = 3500
 
-	var jsonAtlas, err = atlas.Load("atlas/atlas.json")
+	var jsonResources, err = resources.Load("resources.json")
 
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	for i := 0; i < len(jsonAtlas.Tiers); i++ {
-		fmt.Println("Array:", i, jsonAtlas.Tiers[i])
-	}
-
-	// fmt.Println(atlas.Tiers[0])
+	fmt.Println(jsonResources)
 }
