@@ -1,0 +1,293 @@
+{
+  "regions": [
+    {
+      "name": "N. Virginia",
+      "region": "us-east-1",
+      "recommended": false,
+      "cost": 0
+    },
+    {
+      "name": "Ohio",
+      "region": "us-east-2",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "N. California",
+      "region": "us-west-1",
+      "recommended": false,
+      "cost": 1
+    },
+    {
+      "name": "Oregon",
+      "region": "us-west-2",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Montreal",
+      "region": "ca-central-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Stockholm",
+      "region": "eu-north-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Ireland",
+      "region": "eu-west-1",
+      "recommended": true,
+      "cost": 1
+    },
+    {
+      "name": "London",
+      "region": "eu-west-2",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Paris",
+      "region": "eu-west-3",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Frankfurt",
+      "region": "eu-central-1",
+      "recommended": false,
+      "cost": 0
+    },
+    {
+      "name": "Milan",
+      "region": "eu-south-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Sao Paulo",
+      "region": "sa-east-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Hong Kong",
+      "region": "ap-east-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Jakarta",
+      "region": "ap-southeast-3",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Tokyo",
+      "region": "ap-northeast-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Seoul",
+      "region": "ap-northeast-2",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Osaka",
+      "region": "ap-northeast-3",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Singapore",
+      "region": "ap-southeast-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Mumbai",
+      "region": "ap-south-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Sydney",
+      "region": "ap-southeast-2",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Bahrain",
+      "region": "me-south-1",
+      "recommended": true,
+      "cost": 0
+    },
+    {
+      "name": "Cape Town",
+      "region": "af-south-1",
+      "recommended": true,
+      "cost": 0
+    }
+  ],
+  "tiers": [
+    {
+      "tier": "M10",
+      "cpus": 2,
+      "iops": 1000,
+      "connections": 1500,
+      "network": { "value": 5, "unit": "Gbps" },
+      "ram": {
+        "value": 2,
+        "unit": "GB"
+      },
+      "storage": {
+        "default": {
+          "size": {
+            "value": 10,
+            "unit": "GB"
+          },
+          "cost": {
+            "value": 0,
+            "unit": "USD"
+          }
+        },
+        "range": {
+          "min": {
+            "size": {
+              "value": 10,
+              "unit": "GB"
+            },
+            "cost": {
+              "value": 0,
+              "unit": "USD"
+            }
+          },
+          "max": {
+            "size": {
+              "value": 128,
+              "unit": "GB"
+            },
+            "cost": {
+              "value": 0.07,
+              "unit": "USD"
+            }
+          }
+        }
+      },
+      "cost": {
+        "value": 0.09,
+        "unit": "USD"
+      }
+    },
+    {
+      "tier": "M20",
+      "cpus": 2,
+      "iops": 2000,
+      "connections": 3000,
+      "network": { "value": 5, "unit": "Gbps" },
+      "ram": {
+        "value": 2,
+        "unit": "GB"
+      },
+      "storage": {
+        "default": {
+          "size": {
+            "value": 20,
+            "unit": "GB"
+          },
+          "cost": {
+            "value": 0,
+            "unit": "USD"
+          }
+        },
+        "range": {
+          "min": {
+            "size": {
+              "value": 10,
+              "unit": "GB"
+            },
+            "cost": {
+              "value": 0,
+              "unit": "USD"
+            }
+          },
+          "max": {
+            "size": {
+              "value": 256,
+              "unit": "GB"
+            },
+            "cost": {
+              "value": 0.17,
+              "unit": "USD"
+            }
+          }
+        }
+      },
+      "cost": {
+        "value": 0.23,
+        "unit": "USD"
+      }
+    },
+    {
+      "tier": "M30",
+      "cpus": 2,
+      "iops": 3000,
+      "connections": 3000,
+      "network": { "value": 10, "unit": "Gbps" },
+      "ram": {
+        "value": 8,
+        "unit": "GB"
+      },
+      "storage": {
+        "default": {
+          "size": {
+            "value": 40,
+            "unit": "GB"
+          },
+          "cost": {
+            "value": 0,
+            "unit": "USD"
+          }
+        },
+        "range": {
+          "min": {
+            "size": {
+              "value": 10,
+              "unit": "GB"
+            },
+            "cost": {
+              "value": 0,
+              "unit": "USD"
+            }
+          },
+          "max": {
+            "size": {
+              "value": 512,
+              "unit": "GB"
+            },
+            "cost": {
+              "value": 0.33,
+              "unit": "USD"
+            }
+          }
+        }
+      },
+      "cost": {
+        "value": 0.62,
+        "unit": "USD"
+      },
+      "shards": {
+        "min": 1,
+        "max": 50,
+        "cost": {
+          "value": 0.62,
+          "unit": "USD"
+        }
+      }
+    }
+  ]
+}
