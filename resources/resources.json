@@ -1,0 +1,587 @@
+{
+  "organization": "indeed.com - Atlas organization",
+  "project": "jobalert-chronicler-prod",
+  "cluster": "jobalert-chronicler",
+  "timestamp": "2023-03-01",
+  "resources": {
+    "cpus": 15,
+    "ram": {
+      "value": 100,
+      "unit": "GB"
+    },
+    "storage": {
+      "value": 5,
+      "unit": "TB"
+    },
+    "iops": {
+      "reads": {
+        "value": 23000,
+        "blocksize": 16384
+      },
+      "writes": {
+        "value": 295000,
+        "blocksize": 16384
+      }
+    }
+  },
+  "configuration": {
+    "type": "sharded",
+    "topology": [
+      [
+        {
+          "name": "jobalert-chronicler-shard-00-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-00-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-00-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-00-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-00-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-00-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-00-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-01-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-01-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-01-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-01-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-01-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-01-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-01-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-02-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-02-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-02-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-02-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-02-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-02-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-02-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-03-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-03-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-03-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-03-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-03-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-03-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-03-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-04-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-04-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-04-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-04-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-04-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-04-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-04-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-05-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-05-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-05-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-05-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-05-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-05-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-05-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-06-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-06-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-06-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-06-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-06-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-06-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-06-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-07-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-07-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-07-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-07-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-07-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-07-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-07-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-08-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-08-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-08-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-08-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-08-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-08-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-08-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-09-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-09-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-09-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-09-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-09-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-09-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-09-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-10-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-10-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-10-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-10-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-10-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-10-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-10-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-11-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-11-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-11-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-11-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-11-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-11-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-11-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-12-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-12-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-12-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-12-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-12-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-12-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-12-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-13-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-13-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-13-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-13-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-13-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-13-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-13-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ],
+      [
+        {
+          "name": "jobalert-chronicler-shard-14-00.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-14-01.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-14-02.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-14-03.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-14-04.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "us-east-2"
+        },
+        {
+          "name": "jobalert-chronicler-shard-14-05.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        },
+        {
+          "name": "jobalert-chronicler-shard-14-06.i45iy.mongodb.net",
+          "type": "PSS",
+          "region": "ca-central-1"
+        }
+      ]
+    ]
+  }
+}
