@@ -181,6 +181,14 @@
       "cost": {
         "value": 0.09,
         "unit": "USD"
+      },
+      "shards": {
+        "min": 0,
+        "max": 0,
+        "cost": {
+          "value": 0,
+          "unit": "USD"
+        }
       }
     },
     {
@@ -230,6 +238,14 @@
       "cost": {
         "value": 0.23,
         "unit": "USD"
+      },
+      "shards": {
+        "min": 1,
+        "max": 1,
+        "cost": {
+          "value": 0,
+          "unit": "USD"
+        }
       }
     },
     {

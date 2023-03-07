@@ -1,6 +1,7 @@
 package atlas
 
 import (
+	"determinator/utils"
 	"encoding/json"
 	"errors"
 	"os"
@@ -17,30 +18,32 @@ type Regions struct {
 	Regions []Region `json:"regions"`
 }
 
-type Value struct {
-	Value float64 `json:"value"`
-	Unit  string  `json:"unit"`
-}
-
 type Range struct {
-	Min Value `json:"min"`
-	Max Value `json:"max"`
+	Min units.Value `json:"min"`
+	Max units.Value `json:"max"`
 }
 
 type Storage struct {
-	Default Value `json:"default"`
-	Range   Range `json:"range"`
+	Default units.Value `json:"default"`
+	Range   Range       `json:"range"`
+}
+
+type Shards struct {
+	Min  int         `json:"min"`
+	Max  int         `json:"max"`
+	Cost units.Value `json:"cost"`
 }
 
 type Tier struct {
-	Tier        string  `json:"tier"`
-	Cpus        int     `json:"cpus"`
-	Iops        int     `json:"iops"`
-	Connections int     `json:"connections"`
-	Network     Value   `json:"network"`
-	Ram         Value   `json:"ram"`
-	Storage     Storage `json:"storage"`
-	Cost        Value   `json:"cost"`
+	Tier        string      `json:"tier"`
+	Cpus        int         `json:"cpus"`
+	Iops        int         `json:"iops"`
+	Connections int         `json:"connections"`
+	Network     units.Value `json:"network"`
+	Ram         units.Value `json:"ram"`
+	Storage     Storage     `json:"storage"`
+	Cost        units.Value `json:"cost"`
+	Shards      Shards      `json:"shards"`
 }
 
 type Tiers struct {

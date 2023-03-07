@@ -1,15 +1,11 @@
 package resources
 
 import (
+	units "determinator/utils"
 	"encoding/json"
 	"errors"
 	"os"
 )
-
-type Value struct {
-	Value float64 `json:"value"`
-	Unit  string  `json:"unit"`
-}
 
 type IOPS struct {
 	Value     int `json:"value"`
@@ -22,10 +18,10 @@ type IOPSrw struct {
 }
 
 type Resources struct {
-	CPUs    int    `json:"cpus"`
-	RAM     Value  `json:"ram"`
-	Storage Value  `json:"storage"`
-	IOPS    IOPSrw `json:"iops"`
+	Cpus    int         `json:"cpus"`
+	Ram     units.Value `json:"ram"`
+	Storage units.Value `json:"storage"`
+	Iops    IOPSrw      `json:"iops"`
 }
 
 type JSONResources struct {
