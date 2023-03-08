@@ -1,20 +1,15 @@
 package resources
 
 import (
-	units "determinator/utils"
+	"determinator/utils"
 	"encoding/json"
 	"errors"
 	"os"
 )
 
-type IOPS struct {
-	Value     int `json:"value"`
-	Blocksize int `json:"blocksize"`
-}
-
 type IOPSrw struct {
-	Reads  IOPS `json:"reads"`
-	Writes IOPS `json:"writes"`
+	Reads  IOPS.IOPS `json:"reads"`
+	Writes IOPS.IOPS `json:"writes"`
 }
 
 type Resources struct {
@@ -36,7 +31,7 @@ func Load(fn string) (JSONResources, error) {
 	bytes, err := os.ReadFile(fn)
 
 	if err != nil {
-		return JSONResources{}, errors.New("Unable to load file")
+		return JSONResources{}, errors.New("unable to load file")
 	}
 
 	var jsonResources JSONResources

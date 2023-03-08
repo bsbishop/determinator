@@ -5,22 +5,22 @@ type Value struct {
 	Unit  string  `json:"unit"`
 }
 
-func ConvertBytes(unit Value, toUnit string) Value {
+func ConvertBytes(val Value, toUnit string) Value {
 	var result = Value{Value: 0, Unit: "B"}
 
-	switch unit.Unit {
+	switch val.Unit {
 	case "B":
-		result.Value = unit.Value
+		result.Value = val.Value
 	case "KB":
-		result.Value = unit.Value * 1000
+		result.Value = val.Value * 1000
 	case "MB":
-		result.Value = unit.Value * (1000 * 1000)
+		result.Value = val.Value * (1000 * 1000)
 	case "GB":
-		result.Value = unit.Value * (1000 * 1000 * 1000)
+		result.Value = val.Value * (1000 * 1000 * 1000)
 	case "TB":
-		result.Value = unit.Value * (1000 * 1000 * 1000 * 1000)
+		result.Value = val.Value * (1000 * 1000 * 1000 * 1000)
 	case "PB":
-		result.Value = unit.Value * (1000 * 1000 * 1000 * 1000 * 1000)
+		result.Value = val.Value * (1000 * 1000 * 1000 * 1000 * 1000)
 	}
 
 	switch toUnit {
