@@ -136,67 +136,69 @@
   "tiers": [
     {
       "tier": "M10",
-      "cpus": 2,
-      "iops": 1000,
+      "skip": true,
+      "class": [
+        {
+          "name": "General",
+          "cpus": 2,
+          "cost": {
+            "value": 0.09,
+            "unit": "USD"
+          }
+        }
+      ],
       "connections": 1500,
-      "network": { "value": 5, "unit": "Gbps" },
+      "network": {
+        "value": 5,
+        "unit": "Gbps"
+      },
       "ram": {
         "value": 2,
         "unit": "GB"
       },
       "storage": {
         "default": {
-          "size": {
-            "value": 10,
-            "unit": "GB"
-          },
-          "cost": {
-            "value": 0,
-            "unit": "USD"
-          }
+          "value": 10,
+          "unit": "GB"
         },
-        "range": {
-          "min": {
-            "size": {
-              "value": 10,
-              "unit": "GB"
-            },
-            "cost": {
-              "value": 0,
-              "unit": "USD"
-            }
-          },
-          "max": {
-            "size": {
-              "value": 128,
-              "unit": "GB"
-            },
-            "cost": {
-              "value": 0.07,
-              "unit": "USD"
-            }
-          }
+        "min": {
+          "value": 10,
+          "unit": "GB"
+        },
+        "max": {
+          "value": 128,
+          "unit": "GB"
+        },
+        "cost": {
+          "value": 0.07,
+          "unit": "USD"
         }
       },
-      "cost": {
-        "value": 0.09,
-        "unit": "USD"
-      },
-      "shards": {
-        "min": 0,
-        "max": 0,
-        "cost": {
-          "value": 0,
-          "unit": "USD"
+      "iops": {
+        "default": {
+          "value": 1000,
+          "unit": 16384
         }
       }
     },
     {
       "tier": "M20",
-      "cpus": 2,
-      "iops": 2000,
+      "skip": true,
+      "class": [
+        {
+          "name": "General",
+          "cpus": 2,
+          "cost": {
+            "value": 0.23,
+            "unit": "USD"
+          }
+        }
+      ],
       "connections": 3000,
-      "network": { "value": 5, "unit": "Gbps" },
+      "network": {
+        "value": 5,
+        "unit": "Gbps"
+      },
       "ram": {
         "value": 2,
         "unit": "GB"
@@ -212,32 +214,52 @@
             "unit": "USD"
           }
         },
-        "range": {
-          "min": {
-            "size": {
-              "value": 10,
-              "unit": "GB"
-            },
-            "cost": {
-              "value": 0,
-              "unit": "USD"
-            }
+        "min": {
+          "size": {
+            "value": 10,
+            "unit": "GB"
           },
-          "max": {
-            "size": {
-              "value": 256,
-              "unit": "GB"
-            },
-            "cost": {
-              "value": 0.17,
-              "unit": "USD"
-            }
+          "cost": {
+            "value": 0,
+            "unit": "USD"
+          }
+        },
+        "max": {
+          "size": {
+            "value": 256,
+            "unit": "GB"
+          },
+          "cost": {
+            "value": 0.17,
+            "unit": "USD"
           }
         }
       },
-      "cost": {
-        "value": 0.23,
-        "unit": "USD"
+      "iops": {
+        "default": {
+          "value": 2000,
+          "blocksize": 16384,
+          "cost": {
+            "value": 0,
+            "unit": "USD"
+          }
+        },
+        "min": {
+          "size": {
+            "value": 2000,
+            "blocksize": 16384
+          }
+        },
+        "max": {
+          "size": {
+            "value": 2000,
+            "blocksize": 3000
+          }
+        },
+        "cost": {
+          "value": 0,
+          "unit": "USD"
+        }
       },
       "shards": {
         "min": 1,
@@ -250,10 +272,22 @@
     },
     {
       "tier": "M30",
-      "cpus": 2,
-      "iops": 3000,
+      "skip": true,
+      "class": [
+        {
+          "name": "General",
+          "cpus": 2,
+          "cost": {
+            "value": 0.62,
+            "unit": "USD"
+          }
+        }
+      ],
       "connections": 3000,
-      "network": { "value": 10, "unit": "Gbps" },
+      "network": {
+        "value": 10,
+        "unit": "Gbps"
+      },
       "ram": {
         "value": 8,
         "unit": "GB"
@@ -269,32 +303,44 @@
             "unit": "USD"
           }
         },
-        "range": {
-          "min": {
-            "size": {
-              "value": 10,
-              "unit": "GB"
-            },
-            "cost": {
-              "value": 0,
-              "unit": "USD"
-            }
+        "min": {
+          "size": {
+            "value": 10,
+            "unit": "GB"
           },
-          "max": {
-            "size": {
-              "value": 512,
-              "unit": "GB"
-            },
-            "cost": {
-              "value": 0.33,
-              "unit": "USD"
-            }
+          "cost": {
+            "value": 0,
+            "unit": "USD"
+          }
+        },
+        "max": {
+          "size": {
+            "value": 512,
+            "unit": "GB"
+          },
+          "cost": {
+            "value": 0.33,
+            "unit": "USD"
           }
         }
       },
-      "cost": {
-        "value": 0.62,
-        "unit": "USD"
+      "iops": {
+        "default": {
+          "value": 3000,
+          "blocksize": 16384
+        },
+        "min": {
+          "size": {
+            "value": 3000,
+            "blocksize": 16384
+          }
+        },
+        "max": {
+          "size": {
+            "value": 3000,
+            "blocksize": 3000
+          }
+        }
       },
       "shards": {
         "min": 1,
@@ -302,6 +348,245 @@
         "cost": {
           "value": 0.62,
           "unit": "USD"
+        }
+      }
+    },
+    {
+      "tier": "M40",
+      "skip": true,
+      "class": [
+        {
+          "name": "General",
+          "cpus": 4,
+          "cost": {
+            "value": 1.19,
+            "unit": "USD"
+          }
+        },
+        {
+          "name": "Low-CPU",
+          "cpus": 2,
+          "cost": {
+            "value": 0.89,
+            "unit": "USD"
+          }
+        },
+        {
+          "name": "Local NVMe SSD",
+          "cpus": 2,
+          "cost": {
+            "value": 1.47,
+            "unit": "USD"
+          },
+          "iops": {
+            "read": {
+              "value": 100125,
+              "blocksize": 16384
+            },
+            "write": {
+              "size": {
+                "value": 35000,
+                "blocksize": 16384
+              }
+            }
+          }
+        }
+      ],
+      "connections": 6000,
+      "network": {
+        "value": 10,
+        "unit": "Gbps"
+      },
+      "ram": {
+        "value": 16,
+        "unit": "GB"
+      },
+      "storage": {
+        "default": {
+          "size": {
+            "value": 80,
+            "unit": "GB"
+          },
+          "cost": {
+            "value": 0,
+            "unit": "USD"
+          }
+        },
+        "min": {
+          "size": {
+            "value": 10,
+            "unit": "GB"
+          },
+          "cost": {
+            "value": 0,
+            "unit": "USD"
+          }
+        },
+        "max": {
+          "size": {
+            "value": 1,
+            "unit": "TB"
+          },
+          "cost": {
+            "value": 0.66,
+            "unit": "USD"
+          }
+        }
+      },
+      "iops": {
+        "default": {
+          "value": 3000,
+          "blocksize": 16384
+        },
+        "min": {
+          "size": {
+            "value": 3000,
+            "blocksize": 16384
+          }
+        },
+        "max": {
+          "size": {
+            "value": 3072,
+            "blocksize": 16384
+          }
+        }
+      },
+      "shards": {
+        "min": 1,
+        "max": 50,
+        "cost": {
+          "value": 1.19,
+          "unit": "USD"
+        }
+      }
+    },
+    {
+      "tier": "M50",
+      "class": [
+        {
+          "name": "General",
+          "cpus": 8,
+          "cost": {
+            "value": 2.29,
+            "unit": "USD"
+          }
+        },
+        {
+          "name": "Low-CPU",
+          "cpus": 4,
+          "cost": {
+            "value": 1.70,
+            "unit": "USD"
+          }
+        },
+        {
+          "name": "Local NVMe SSD",
+          "cpus": 4,
+          "cost": {
+            "value": 2.81,
+            "unit": "USD"
+          },
+          "storage": {
+            "value": 760,
+            "unit": "GB"
+          },
+          "iops": {
+            "read": {
+              "value": 206250,
+              "blocksize": 16384
+            },
+            "write": {
+              "value": 70000,
+              "blocksize": 16384
+            }
+          }
+        }
+      ],
+      "connections": 16000,
+      "network": {
+        "value": 10,
+        "unit": "Gbps"
+      },
+      "ram": {
+        "value": 30.5,
+        "unit": "GB"
+      },
+      "iops": {
+        "value": 3000,
+        "blocksize": 16384
+      },
+      "storage": {
+        "default": {
+          "value": 160,
+          "unit": "GB"
+        },
+        "min": {
+          "value": 10,
+          "unit": "GB"
+        },
+        "max": {
+          "value": 4096,
+          "unit": "GB"
+        },
+        "cost": {
+          "min": {
+            "size": {
+              "value": 161,
+              "unit": "GB"
+            },
+            "cost": {
+              "value": 2.40,
+              "unit": "USD"
+            }
+          },
+          "max": {
+            "size": {
+              "value": 4081,
+              "unit": "GB"
+            },
+            "cost": {
+              "value": 4.90,
+              "unit": "USD"
+            }
+          }
+        },
+        "iops": {
+          "min": {
+            "storage": {
+              "value": 1000,
+              "unit": "GB"
+            },
+            "iops": {
+              "value": 3000,
+              "blocksize": 16384
+            }
+          },
+          "max": {
+            "storage": {
+              "value": 2670,
+              "unit": "GB"
+            },
+            "iops": {
+              "value": 8000,
+              "blocksize": 16384
+            }
+          }
+        }
+      },
+      "shards": {
+        "smin": {
+          "count": 1,
+          "cost": {
+            "value": 2.91,
+            "unit": "USD"
+          }
+        },
+        "smax": {
+          "count": 50,
+          "cost": {
+            "value": 115.35,
+            "unit": "USD"
+          }
         }
       }
     }

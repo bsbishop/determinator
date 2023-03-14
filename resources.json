@@ -14,12 +14,12 @@
       "unit": "TB"
     },
     "iops": {
-      "reads": {
-        "value": 23000,
+      "read": {
+        "value": 230,
         "blocksize": 16384
       },
-      "writes": {
-        "value": 295000,
+      "write": {
+        "value": 2950,
         "blocksize": 16384
       }
     }

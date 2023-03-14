@@ -7,16 +7,21 @@ import (
 	"os"
 )
 
-type IOPSrw struct {
-	Reads  IOPS.IOPS `json:"reads"`
-	Writes IOPS.IOPS `json:"writes"`
+type IOPS struct {
+	Value     float64 `json:"value"`
+	Blocksize float64 `json:"blocksize"`
+}
+
+type RWIops struct {
+	Read  IOPS `json:"read"`
+	Write IOPS `json:"write"`
 }
 
 type Resources struct {
-	Cpus    int         `json:"cpus"`
+	Cpus    float64     `json:"cpus"`
 	Ram     units.Value `json:"ram"`
 	Storage units.Value `json:"storage"`
-	Iops    IOPSrw      `json:"iops"`
+	Iops    RWIops      `json:"iops"`
 }
 
 type JSONResources struct {
